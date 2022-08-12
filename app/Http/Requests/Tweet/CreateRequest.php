@@ -3,7 +3,7 @@
 namespace App\Http\Requests\Tweet;
 
 use Illuminate\Foundation\Http\FormRequest;
-class CreateRequest extends FormRequst
+class CreateRequest extends FormRequest
 
 {
     /**
@@ -13,7 +13,7 @@ class CreateRequest extends FormRequst
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class CreateRequest extends FormRequst
     public function rules()
     {
         return [
-            //
+            'tweet' => 'required|max:140'
         ];
+    }
+
+    public function tweet(): string
+    {
+        return $this->input('tweet');
     }
 }
