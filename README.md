@@ -9,4 +9,7 @@
 
 ## Sail App
 
-本アプリは、```Professional Web Programing for laravel9```を参考に実装したプロジェクトです。
+本アプリのバージョンは```Laravel9```。  
+Laravel独自の環境構築インターフェース```Laravel Sail```を使って開発。  
+Docker環境で、MySQL・Redisを使用。  
+```Sail```コマンドへの慣れ・実装における曖昧な理解の解消を目的に、CRUDで簡易SNSを作成。
