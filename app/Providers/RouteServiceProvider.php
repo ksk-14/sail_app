@@ -26,6 +26,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Route::pattern('tweetID', '[0-9]+');
         $this->configureRateLimiting();
 
         $this->routes(function () {
